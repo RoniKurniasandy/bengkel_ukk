@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-primary" href="#">
+      Bengkel Mobil Sejahtera
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link {{ request()->is('dashboard*') ? 'active fw-semibold text-primary' : '' }}" href="{{ route('dashboard') }}">
+            <i class="bi bi-speedometer2"></i> Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ request()->is('servis*') ? 'active fw-semibold text-primary' : '' }}" href="#">
+            <i class="bi bi-wrench-adjustable-circle"></i> Servis Saya
+          </a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <span class="me-3 text-primary fw-semibold">{{ Auth::user()->nama }}</span>
+        <form method="POST" action="{{ route('logout') }}">
+          @csrf
+          <button class="btn btn-outline-danger btn-sm">
+            <i class="bi bi-box-arrow-right"></i> Keluar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>

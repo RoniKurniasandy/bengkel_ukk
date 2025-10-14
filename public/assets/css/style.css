@@ -1,0 +1,302 @@
+
+/* =====================================================
+   GENERAL STYLES
+===================================================== */
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.site-navbar {
+  background: #000;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.site-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.site-navigation ul li a {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.site-navigation ul li a:hover,
+.site-navigation ul li.active a {
+  color: #f8c146;
+}
+
+.site-menu-toggle {
+  display: none;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.ftco-cover-1 {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.ftco-cover-1 .overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.feature-car-rent-box-1 {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feature-car-rent-box-1 h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.feature-car-rent-box-1 ul {
+  padding: 0;
+  margin: 0 0 20px 0;
+  list-style: none;
+}
+
+.feature-car-rent-box-1 ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.feature-car-rent-box-1 .btn {
+  padding: 8px 20px;
+}
+
+/* =====================================================
+   TRIP FORM
+===================================================== */
+.trip-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.trip-form label {
+  font-weight: 500;
+}
+
+.trip-form input {
+  border-radius: 8px;
+}
+
+/* =====================================================
+   OFFER SECTION
+===================================================== */
+.item-1 {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.item-1:hover {
+  transform: translateY(-5px);
+}
+
+.item-1-contents {
+  padding: 20px;
+}
+
+.item-1 h3 a {
+  color: #333;
+  font-weight: 600;
+}
+
+.item-1 .rent-price {
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+.how-it-works {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.how-it-works .step {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 calc(20% - 20px);
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.how-it-works .number {
+  display: block;
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.how-it-works .caption {
+  display: block;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* =====================================================
+   TESTIMONIALS
+===================================================== */
+.testimonial-2 {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.v-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.site-footer {
+  background: #000;
+  color: #aaa;
+  padding: 60px 0;
+  font-size: 15px;
+}
+
+.site-footer a {
+  color: #ddd;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+.footer-heading {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .site-navigation {
+    display: none;
+  }
+
+  .site-menu-toggle {
+    display: inline-block;
+  }
+
+  .feature-car-rent-box-1 {
+    margin-top: 20px;
+  }
+
+  .how-it-works .step {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .site-navbar {
+    text-align: center;
+  }
+
+  .site-logo {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .trip-form .row > div {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .how-it-works {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .how-it-works .step {
+    flex: 1 1 100%;
+  }
+
+  .testimonial-2 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Extra Small Devices (≤ 576px) */
+@media (max-width: 576px) {
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .site-footer .row > div {
+    margin-bottom: 20px;
+  }
+}
